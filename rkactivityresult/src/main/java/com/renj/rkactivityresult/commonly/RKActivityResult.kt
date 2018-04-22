@@ -27,12 +27,10 @@ object RKActivityResult {
     private val TAG = "RKActivityResult_Commonly"
 
     fun create(activity: Activity): Builder {
-        return if (activity is FragmentActivity) {
-            Builder(activity)
-        } else if (activity is Activity) {
-            Builder(activity)
-        } else {
-            throw IllegalArgumentException("Activity 参数异常!!!")
+        return when (activity) {
+            is FragmentActivity -> Builder(activity)
+            is Activity -> Builder(activity)
+            else -> throw IllegalArgumentException("Activity 参数异常!!!")
         }
     }
 
