@@ -25,7 +25,7 @@ import java.util.*
  * ======================================================================
  */
 class RKActivityResultV4Fragment : Fragment(), IProxyFragment {
-    private var RKActivityResultListener: RKActivityResult.RKActivityResultListener? = null
+    private var rkActivityResultListener: RKActivityResult.RKActivityResultListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,18 +35,18 @@ class RKActivityResultV4Fragment : Fragment(), IProxyFragment {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (RKActivityResultListener == null) {
-            Log.i(TAG, "没有设置 RKActivityResult.RKActivityResultListener !!!")
+        if (rkActivityResultListener == null) {
+            Log.i(TAG, "没有设置 RKActivityResult.rkActivityResultListener !!!")
             return
         }
 
         if (data != null)
-            RKActivityResultListener!!.onResult(RKActivityResponse(requestCode, resultCode, data))
-        RKActivityResultListener!!.onComplete(data == null)
+            rkActivityResultListener!!.onResult(RKActivityResponse(requestCode, resultCode, data))
+        rkActivityResultListener!!.onComplete(data == null)
     }
 
     override fun setRKActivityResultListener(rActivityResultListener: RKActivityResult.RKActivityResultListener) {
-        this.RKActivityResultListener = rActivityResultListener
+        this.rkActivityResultListener = rActivityResultListener
     }
 
     override fun startActivityForResult(RKActivityRequest: RKActivityRequest) {

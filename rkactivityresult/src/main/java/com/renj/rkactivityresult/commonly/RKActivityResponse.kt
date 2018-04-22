@@ -23,7 +23,7 @@ import android.content.Intent
 class RKActivityResponse(
         /**
          * 打开时传递的请求码，用于区分不同的请求。<br></br>
-         * 当调用的是 [RActivityResult.Builder.startActivityForResult] 方法打开新界面时不需要做判断
+         * 当调用的是 [RKActivityResult.Builder.startActivityForResult] 方法打开新界面时不需要做判断
          */
         var requestCode: Int,
         /**
