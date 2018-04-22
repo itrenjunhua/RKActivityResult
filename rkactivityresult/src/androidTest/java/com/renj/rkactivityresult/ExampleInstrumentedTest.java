@@ -1,4 +1,4 @@
-package com.renj.rkactivityresul;
+package com.renj.rkactivityresult;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
