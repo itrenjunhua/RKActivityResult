@@ -1,1 +1,1 @@
-include ':app', ':rkactivityresult'
+include ':app'

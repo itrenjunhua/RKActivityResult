@@ -61,8 +61,8 @@ object RKActivityResult {
             return rkActivityResultFragment!!
         }
 
-        private fun findRActivityResultFragment(activity: Activity): RKActivityResultFragment {
-            return activity.fragmentManager.findFragmentByTag(TAG) as RKActivityResultFragment
+        private fun findRActivityResultFragment(activity: Activity): RKActivityResultFragment? {
+            return activity.fragmentManager.findFragmentByTag(TAG) as RKActivityResultFragment? ?: null
         }
 
         //------------------------ v4包 ---------------------//
@@ -81,8 +81,8 @@ object RKActivityResult {
             return rkActivityResultV4Fragment!!
         }
 
-        private fun findRActivityResultV4Fragment(fragmentActivity: FragmentActivity): RKActivityResultV4Fragment {
-            return fragmentActivity.supportFragmentManager.findFragmentByTag(TAG) as RKActivityResultV4Fragment
+        private fun findRActivityResultV4Fragment(fragmentActivity: FragmentActivity): RKActivityResultV4Fragment? {
+            return fragmentActivity.supportFragmentManager.findFragmentByTag(TAG) as RKActivityResultV4Fragment? ?: null
         }
 
         /**

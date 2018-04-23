@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".commonlytest.ListenerFirstActivity"/>
+        <activity android:name=".commonlytest.ListenerSecondActivity"/>
+        <activity android:name=".commonlytest.ListenerThreadActivity"/>
+        <activity android:name=".commonlytest.ListenerMyFragmentActivity"/>
     </application>
 
 </manifest>
