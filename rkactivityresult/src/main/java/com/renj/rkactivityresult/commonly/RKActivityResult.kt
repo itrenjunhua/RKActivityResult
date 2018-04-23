@@ -89,22 +89,22 @@ object RKActivityResult {
          * 以 startActivityForResult() 的方式打开新的Activity，参数只传递 [Intent] 对象，在监听的回调中不需要对 requestCode 进行判断
          *
          * @param intent                  [Intent] 对象
-         * @param RKActivityResultListener 回调监听 [RKActivityResultListener] 对象
+         * @param rkActivityResultListener 回调监听 [RKActivityResultListener] 对象
          */
-        fun startActivityForResult(intent: Intent, RKActivityResultListener: RKActivityResultListener) {
-            iProxyFragment!!.setRKActivityResultListener(RKActivityResultListener)
+        fun startActivityForResult(intent: Intent, rkActivityResultListener: RKActivityResultListener) {
+            iProxyFragment!!.setRKActivityResultListener(rkActivityResultListener)
             iProxyFragment!!.startActivityForResult(intent)
         }
 
         /**
          * 以 startActivityForResult() 的方式打开新的Activity，参数传递[RKActivityRequest]对象，在监听的回调中根据需要对 requestCode 进行判断，一般情况下都不需要
          *
-         * @param RKActivityRequest        [RKActivityRequest] 对象
-         * @param RKActivityResultListener 回调监听 [RKActivityResultListener] 对象
+         * @param rkActivityRequest        [RKActivityRequest] 对象
+         * @param rkActivityResultListener 回调监听 [RKActivityResultListener] 对象
          */
-        fun startActivityForResult(RKActivityRequest: RKActivityRequest, RKActivityResultListener: RKActivityResultListener) {
-            iProxyFragment!!.setRKActivityResultListener(RKActivityResultListener)
-            iProxyFragment!!.startActivityForResult(RKActivityRequest)
+        fun startActivityForResult(rkActivityRequest: RKActivityRequest, rkActivityResultListener: RKActivityResultListener) {
+            iProxyFragment!!.setRKActivityResultListener(rkActivityResultListener)
+            iProxyFragment!!.startActivityForResult(rkActivityRequest)
         }
     }
 
@@ -115,16 +115,16 @@ object RKActivityResult {
         /**
          * [Intent] 不为 `null` 的时候才会回调的方法
          *
-         * @param RKActivityResponse [RKActivityResponse] 对象，回调了这个方法 [RKActivityResponse.responseIntent] 不会为 `null` 了
+         * @param rkActivityResponse [RKActivityResponse] 对象，回调了这个方法 [RKActivityResponse.responseIntent] 不会为 `null` 了
          */
-        abstract fun onResult(RKActivityResponse: RKActivityResponse)
+        abstract fun onResult(rkActivityResponse: RKActivityResponse)
 
         /**
          * 一定会回调的方法，表示完成。这个方法主要是在不需要传递数据，只需要新打开的界面关闭了然后做其他操作时重写即可
          *
          * @param intentIsEmpty [RKActivityResponse.responseIntent] 是否为 `null`，true：为`null`；false：非 `null`
          */
-        fun onComplete(intentIsEmpty: Boolean) {
+        open fun onComplete(intentIsEmpty: Boolean) {
 
         }
     }

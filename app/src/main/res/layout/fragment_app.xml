@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     android:gravity="center"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:lineSpacingExtra="4dp"
-        android:text="@string/home_hint"
-        android:textColor="#FF333333"
-        android:textSize="15sp"/>
+        android:text="继承至app包下的Fragment"/>
 
     <Button
-        android:id="@+id/bt_rx_method"
+        android:id="@+id/bt_open_second"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:text="使用RxJava方式"/>
+        android:text="打开第二个Activity"
+        android:textAllCaps="false"/>
 
     <Button
-        android:id="@+id/bt_listener_method"
+        android:id="@+id/bt_open_thread"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:text="使用回调方式"/>
+        android:text="打开第三个Activity"
+        android:textAllCaps="false"/>
 
 </LinearLayout>

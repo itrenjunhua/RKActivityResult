@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RKActivityResult</string>
+    <string name="home_hint">Kotlin代码\n使用不同的方式实现不要重写\nonActivityResult()方法就能获取返回结果\n对startActivityForResult()打开Activity进行封装</string>
 </resources>
