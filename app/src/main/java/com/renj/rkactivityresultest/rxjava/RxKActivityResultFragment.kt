@@ -26,6 +26,10 @@ import java.util.*
  * ======================================================================
  */
 class RxKActivityResultFragment : Fragment(), IProxyFragment {
+    companion object {
+        private val TAG = RxKActivityResultFragment::class.java.name
+    }
+
     private var subject: Subject<RKActivityResponse>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,9 +63,5 @@ class RxKActivityResultFragment : Fragment(), IProxyFragment {
         val random = Random()
         val requestCode = random.nextInt(12500) + random.nextInt(25000)
         startActivityForResult(intent, requestCode)
-    }
-
-    companion object {
-        private val TAG = RxKActivityResultFragment::class.simpleName
     }
 }
