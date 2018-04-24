@@ -38,13 +38,13 @@ object RKActivityResult {
         constructor(activity: Activity) {
             iProxyFragment = getRxActivityResultFragment(activity)
             subject = PublishSubject.create<RKActivityResponse>()
-            iProxyFragment!!.setRKActivityResponseSubject(subject!!)
+            iProxyFragment!!.setRxKActivityResponseSubject(subject!!)
         }
 
         constructor(fragmentActivity: FragmentActivity) {
             iProxyFragment = getRxActivityResultV4Fragment(fragmentActivity)
             subject = PublishSubject.create()
-            iProxyFragment!!.setRKActivityResponseSubject(subject!!)
+            iProxyFragment!!.setRxKActivityResponseSubject(subject!!)
         }
 
         //------------------------ app包 ---------------------//
@@ -98,13 +98,13 @@ object RKActivityResult {
         }
 
         /**
-         * 以 startActivityForResult() 的方式打开新的Activity，参数传递[RActivityRequest]对象，在监听的回调中根据需要对 requestCode 进行判断，一般情况下都不需要
+         * 以 startActivityForResult() 的方式打开新的Activity，参数传递[RKActivityRequest]对象，在监听的回调中根据需要对 requestCode 进行判断，一般情况下都不需要
          *
-         * @param rActivityRequest [RActivityRequest] 对象
+         * @param rkActivityRequest [RKActivityRequest] 对象
          */
 
-        fun startActivityForResult(rActivityRequest: RKActivityRequest): Observable<RKActivityResponse> {
-            iProxyFragment!!.startActivityForResult(rActivityRequest)
+        fun startActivityForResult(rkActivityRequest: RKActivityRequest): Observable<RKActivityResponse> {
+            iProxyFragment!!.startActivityForResult(rkActivityRequest)
             return subject!!
         }
     }

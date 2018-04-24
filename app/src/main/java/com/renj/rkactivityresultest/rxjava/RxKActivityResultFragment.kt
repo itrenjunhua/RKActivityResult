@@ -49,12 +49,12 @@ class RxKActivityResultFragment : Fragment(), IProxyFragment {
         subject!!.onComplete()
     }
 
-    override fun setRKActivityResponseSubject(subject: Subject<RKActivityResponse>) {
+    override fun setRxKActivityResponseSubject(subject: Subject<RKActivityResponse>) {
         this.subject = subject
     }
 
-    override fun startActivityForResult(RKActivityRequest: RKActivityRequest) {
-        startActivityForResult(RKActivityRequest.requestIntent, RKActivityRequest.requestCode)
+    override fun startActivityForResult(rkActivityRequest: RKActivityRequest) {
+        startActivityForResult(rkActivityRequest.requestIntent, rkActivityRequest.requestCode)
     }
 
     override fun startActivityForResult(intent: Intent) {

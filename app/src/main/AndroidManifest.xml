@@ -20,6 +20,11 @@
         <activity android:name=".commonlytest.ListenerSecondActivity"/>
         <activity android:name=".commonlytest.ListenerThreadActivity"/>
         <activity android:name=".commonlytest.ListenerMyFragmentActivity"/>
+
+        <activity android:name=".rxtest.RxFirstActivity"/>
+        <activity android:name=".rxtest.RxSecondActivity"/>
+        <activity android:name=".rxtest.RxThreadActivity"/>
+        <activity android:name=".rxtest.RxMyFragmentActivity"/>
     </application>
 
 </manifest>

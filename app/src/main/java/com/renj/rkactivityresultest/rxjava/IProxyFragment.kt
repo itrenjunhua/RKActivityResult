@@ -22,14 +22,14 @@ interface IProxyFragment {
      *
      * @param subject
      */
-    fun setRKActivityResponseSubject(subject: Subject<RKActivityResponse>)
+    fun setRxKActivityResponseSubject(subject: Subject<RKActivityResponse>)
 
     /**
      * 调用 startActivityForResult() 方法，传递 [RKActivityRequest] 封装对象，包含 [Intent] 对象 和 requestCode
      *
-     * @param RKActivityRequest [RKActivityRequest] 对象
+     * @param rkActivityRequest [RKActivityRequest] 对象
      */
-    fun startActivityForResult(RKActivityRequest: RKActivityRequest)
+    fun startActivityForResult(rkActivityRequest: RKActivityRequest)
 
     /**
      * 调用 startActivityForResult() 方法，传递 [Intent] 对象
